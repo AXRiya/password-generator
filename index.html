@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <div class="main-wrapper">
+        <div class="container">
+            <h2>Password Generator</h2>
+            <p class="subtitle">Generates secure random passwords with adjustable length.</p>
+
+            <div class="result-container">
+                <input type="text" id="passwordResult" readonly placeholder="Your Password">
+                <button id="copyBtn" title="Copy"><i class="fa-regular fa-copy"></i> Copy</button>
+            </div>
+
+            <div class="settings">
+                <div class="setting">
+                    <label>Password length</label>
+                    <div class="range-group">
+                        <input type="range" id="lengthSlider" min="4" max="32" value="16">
+                        <span id="lengthValue">16</span>
+                    </div>
+                </div>
+
+                <div class="setting">
+                    <label>Include characters</label>
+                    <div class="checkbox-group">
+                        <label><input type="checkbox" id="lowercase" checked> Lowercase (a-z)</label>
+                        <label><input type="checkbox" id="uppercase" checked> Uppercase (A-Z)</label>
+                        <label><input type="checkbox" id="numbers" checked> Numbers (0-9)</label>
+                        <label><input type="checkbox" id="symbols" checked> Symbols (!@#$...)</label>
+                    </div>
+                </div>
+            </div>
+
+            <button id="generateBtn" class="main-btn">Generate</button>
+        </div>
+
+<div class="strength-container">
+    <div id="strengthBar"></div>
+</div>
+<p id="strengthText">Strength: <span id="strengthLevel">--</span></p>
+        <div class="footer">
+
+            <p>Created with ❤️ by <b>Ayushi Chaurasia</b></p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
